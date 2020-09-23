@@ -1,0 +1,27 @@
+:root {
+    --dark-color: rgb(18, 23, 61);
+    --medium-color: rgb(47, 20, 143);
+    --light-color: rgb(165, 119, 252);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #42455a;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 2rem;
+}
+
+.header {
+    height: 95vh;
+    background-image: url('../img/pic.jpg');
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 62%, 0% 100%);
+}
