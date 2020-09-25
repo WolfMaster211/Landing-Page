@@ -8,9 +8,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 body {
+    min-height: 100vh;
     background-color: #42455a;
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
@@ -82,6 +84,23 @@ body {
 
 .btn:hover {
     transform: rotateY(200deg);
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+}
+a:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px
 }
 
 @keyframes moveInLeft {
