@@ -1,7 +1,7 @@
 :root {
-    --dark-color: rgb(18, 23, 61);
-    --medium-color: rgb(47, 20, 143);
-    --light-color: rgb(165, 119, 252);
+    --dark-color: rgba(18, 23, 61, 0.4);
+    --medium-color: rgba(47, 20, 143, 0.2);
+    --light-color: rgba(234, 143, 252, 0.5);
 }
 
 * {
@@ -18,10 +18,102 @@ body {
     padding: 2rem;
 }
 
+.btndiv {
+    text-align: center;
+}
+
 .header {
     height: 95vh;
-    background-image: url('../img/pic.jpg');
+    background-image: linear-gradient(to bottom right, var(--dark-color), var(--light-color)), url('../img/pic.jpg');
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 62%, 0% 100%);
 }
+
+.logo-box {
+    position: absolute;
+    top: 4.5%;
+    left: 2.5%;
+}
+
+.logo {
+    height: 2rem;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.5rem;
+    text-align: center;
+    animation: moveInLeft 3s ease-out;
+}
+
+.heading-primary-sub {
+    display: block;
+    letter-spacing: 0.9rem;
+    animation: moveInRight 3s ease-out;
+}
+
+.btn {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    margin: auto;
+    border: 3px solid #ffffff;
+    padding: 1rem;
+    opacity: 0;
+    animation: btn 2s forwards;
+    animation-delay: 1.5s;
+    transition-property: transform;
+    transition-duration: 3s;
+}
+
+.btn:hover {
+    transform: rotateY(200deg);
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes btn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
