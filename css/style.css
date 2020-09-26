@@ -15,9 +15,9 @@ body {
   min-height: 100vh;
   background-color: #42455a;
   font-family: 'Lato', sans-serif;
-  font-size: 1rem;
+  font-size: 100%;
   line-height: 1.7;
-  padding: 2rem;
+  padding: 32px;
 }
 
 .btndiv {
@@ -33,13 +33,13 @@ body {
 }
 
 .logo-box {
-  position: absolute;
-  top: 4.5%;
-  left: 2.5%;
+  position: relative;
+  top: 1.7%;
+  left: 0.9%;
 }
 
 .logo {
-  height: 2rem;
+  height: 32px;
 }
 
 .text-box {
@@ -56,15 +56,17 @@ body {
 
 .heading-primary-main {
   display: block;
-  font-size: 5rem;
-  letter-spacing: 1.5rem;
+  font-size: 4.2vw;
+  letter-spacing: 24px;
   text-align: center;
   animation: moveInLeft 3s ease-out;
 }
 
 .heading-primary-sub {
   display: block;
-  letter-spacing: 0.9rem;
+  font-size: 1.7vw;
+  letter-spacing: 14.4px;
+  text-align: center;
   animation: moveInRight 3s ease-out;
 }
 
@@ -73,9 +75,12 @@ body {
   position: relative;
   color: #ffffff;
   text-decoration: none;
+  text-align: center;
+  height: 9vh;
+  width: 14vw;
   margin: 25px 0;
   padding: 25px 30px;
-  font-size: 24px;
+  font-size: 1.27vw;
   transition: 0.5s;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -215,4 +220,13 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+@-webkit-viewport {
+  width: device-width;
 }
